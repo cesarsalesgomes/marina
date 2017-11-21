@@ -1,0 +1,12 @@
+.bb {
+  border-bottom: 1px solid rgb(214, 210, 210);
+}
+.dark {
+  color: rgb(52,58,64);
+}
+.icon-facebook {
+  color: rgb(0, 0, 0);
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(210,210,210);
+}

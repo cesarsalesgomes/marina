@@ -4,9 +4,13 @@
 /dist
 /tmp
 /out-tsc
+/functions/dist-server
 
 # dependencies
 /node_modules
+/functions/node_modules
+/src/environments/environment.ts
+/src/environments/environment.prod.ts
 
 # IDEs and editors
 /.idea
