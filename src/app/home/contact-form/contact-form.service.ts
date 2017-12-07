@@ -6,6 +6,5 @@ import { AngularFirestore } from 'angularfire2/firestore';
 export class ContactFormService {
 
   constructor(
-    private afs: AngularFirestore
   ) { }
 }
