@@ -1,0 +1,38 @@
+<form class="form-row p-2" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="form-group col-12 col-sm-6 mb-2">
+    <h6 appFontSize [sizes]="[16,14,12,10,9]" class="wine-text mb-1">
+      Nome*
+      <app-show-error [msg]="['Campo obrigatório']" [show]="[checkRequiredTouched('name')]"></app-show-error>
+    </h6>
+    <input appFontSize [sizes]="[14,12,10,8,7]" type="text" class="form-control form-control-sm" maxlength="70" formControlName="name">
+  </div>
+  <div class="form-group col-12 col-sm-6 mb-2">
+    <h6 appFontSize [sizes]="[16,14,12,10,9]" class="wine-text mb-1">
+      Email*
+      <app-show-error [msg]="['Campo obrigatório', 'Email inválido']" [show]="[checkRequiredTouched('email'), checkEmail()]"></app-show-error>
+    </h6>
+    <input appFontSize [sizes]="[14,12,10,8,7]" type="email" class="form-control form-control-sm" maxlength="254" formControlName="email">
+  </div>
+  <div class="form-group col-12 col-sm-6 mb-2">
+    <h6 appFontSize [sizes]="[16,14,12,10,9]" class="wine-text mb-1">
+      Telefone
+    </h6>
+    <input appFontSize [sizes]="[14,12,10,8,7]" [textMask]="{mask: maskTel}" type="text" class="form-control form-control-sm" formControlName="tel">
+  </div>
+  <div class="form-group col-12 col-sm-6 mb-2">
+    <h6 appFontSize [sizes]="[16,14,12,10,9]" class="wine-text mb-1">
+      Celular
+    </h6>
+    <input appFontSize [sizes]="[14,12,10,8,7]" [textMask]="{mask: maskCel}" type="text" class="form-control form-control-sm" formControlName="cel">
+  </div>
+  <div class="form-group col-12 mb-3">
+    <h6 appFontSize [sizes]="[16,14,12,10,9]" class="wine-text mb-1">
+      Mensagem*
+      <app-show-error [msg]="['Campo obrigatório']" [show]="[checkRequiredTouched('message')]"></app-show-error>
+    </h6>
+    <textarea appFontSize [sizes]="[14,12,10,8,7]" class="form-control" formControlName="message" maxlength="500" rows="5"></textarea>
+  </div>
+  <div class="form-group col-12">
+    <button type="submit" appFontSize [sizes]="[16,14,12,10,9]" class="btn btn-light clickable">Enviar Mensagem</button>
+  </div>
+</form>

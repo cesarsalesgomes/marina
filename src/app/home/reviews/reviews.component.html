@@ -1,0 +1,50 @@
+<div class="container mt-3 pb-3 bb" id="clientes">
+  <div class="row d-flex justify-content-center">
+    <div class="col-12 d-flex justify-content-center">
+      <h1 appFontSize [sizes]="[65,55,45,35,25]" class="mb-2 dancing-script wine-text">Nossos Clientes</h1>
+    </div>
+    <div class="col-11 col-sm-10 col-xl-4">
+      <div appFontSize [sizes]="[30,25,20,17,14]" class="row width-100 mb-2 d-flex justify-content-center align-items-center oswald">
+        <i class="icon-facebook mr-2"></i>
+        <span class="wine-text">{{ overall_star_rating_facebook }}</span>
+        <span class="gray-text">/5</span>
+        <i appFontSize [sizes]="[20,25,20,17,14]" class="icon-star"></i>
+      </div>
+      <div *ngFor="let review of reviews_facebook">
+        <div class="row {{ reviews_facebook[0] !== review ? 'b-top' : '' }}">
+          <div class="col-5 d-flex flex-column">
+            <app-rating-stars [rating]="review.rating"></app-rating-stars>
+            <p appFontSize [sizes]="[15,14,12,10,8]" class="mb-0 playfair wine-text">{{ review.reviewer.name }}</p>
+            <p appFontSize [sizes]="[15,14,12,10,8]" class="mb-0 mt-auto playfair font-weight-bold gray-text">{{ review.created_time | dateBr}}</p>
+          </div>
+          <div class="col-7 d-flex align-items-center">
+            <p appFontSize [sizes]="[15,14,12,10,8]" class="mb-0 playfair font-italic">{{ review.review_text}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4 d-none d-xl-block">
+      <img class="width-100" src="assets/img/banner/banner-review.jpg" alt="banner">
+    </div>
+    <div class="col-11 col-sm-10 col-xl-4 pt-2 pt-xl-0">
+      <div appFontSize [sizes]="[30,25,20,17,14]" class="row width-100 mb-2 d-flex justify-content-center align-items-center oswald">
+        <i class="icon-google mr-2"></i>
+        <span class="wine-text">{{ overall_star_rating_google }}</span>
+        <span class="gray-text">/5</span>
+        <i appFontSize [sizes]="[20,25,20,17,14]" class="icon-star"></i>
+      </div>
+      <div *ngFor="let review of reviews_google">
+        <div class="row {{ reviews_google[0] !== review ? 'b-top' : '' }}">
+          <div class="col-5 d-flex flex-column">
+            <app-rating-stars [rating]="review.rating"></app-rating-stars>
+            <p appFontSize [sizes]="[15,14,12,10,8]" class="mb-0 playfair wine-text">{{ review.author_name }}</p>
+            <p appFontSize [sizes]="[15,14,12,10,8]" class="mb-0 mt-auto playfair font-weight-bold gray-text">{{ review.relative_time_description }}</p>
+          </div>
+          <div class="col-7 d-flex align-items-center">
+            <p appFontSize [sizes]="[15,14,12,10,8]" class="mb-0 playfair font-italic">{{ review.text}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

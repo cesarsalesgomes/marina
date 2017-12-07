@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+.oswald {
+  font-family: "Oswald";
+}
+.playfair {
+  font-family: "Playfair Display";
+}
+.dancing-script {
+  font-family: "Dancing Script";
+}
+.b-top {
+  border-top: 1px solid rgb(192, 192, 192);
+}
+.gray-text {
+  color: rgb(192, 192, 192);
+}

@@ -1,0 +1,30 @@
+<div class="container mt-3" id="contato">
+  <div class="row d-flex justify-content-center">
+    <div class="col-8 px-0">
+      <div class="row wine-text">
+        <h6 appFontSize [sizes]="[32,28,24,20,16]" class="width-100 text-center">
+          Contato
+        </h6>
+      </div>
+      <div class="row">
+        <div id="map" class="width-100" #map></div>
+      </div>
+      <div class="row mt-2 pb-2 bb">
+        <h6 appFontSize [sizes]="[20,18,16,14,11]" class="width-100 text-center wine-text mb-1">
+          <i class="icon-location"></i>SÃO CARLOS/SP
+        </h6>
+        <p appFontSize [sizes]="[16,14,12,11,9]" class="width-100 text-center wine-text mb-0">
+          Alameda dos Crisântemos,130 - Cidade Jardim
+        </p>
+      </div>
+      <div class="row m-0 pt-2">
+        <span class="wine-text width-100 text-left mb-1">
+          <h6 appFontSize [sizes]="[26,22,18,14,11]" class="m-0">
+            Queremos lhe ouvir, envie sua mensagem:
+          </h6>
+        </span>
+        <app-contact-form></app-contact-form>
+      </div>
+    </div>
+  </div>
+</div>

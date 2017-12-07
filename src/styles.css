@@ -5,3 +5,15 @@
 .height-100 {
   height: 100%;
 }
+.wine {
+  background-color: rgb(113,24,52)
+}
+.beige {
+  color: rgb(255,239,213)
+}
+.wine-text {
+  color: rgb(113,24,52)
+}
+.bb {
+  border-bottom: 1px solid rgb(214, 210, 210);
+}
