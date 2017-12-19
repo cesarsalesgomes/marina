@@ -1,10 +1,12 @@
 import { Directive, HostBinding, HostListener } from '@angular/core';
+import { Input } from '@angular/core';
 
 @Directive({
   selector: '[appFluid]'
 })
 export class FluidDirective {
 
+  @Input() width: number;
   @HostBinding('class.container') container;
   @HostBinding('class.container-fluid') containerFluid;
 
@@ -17,7 +19,7 @@ export class FluidDirective {
   }
 
   fluid() {
-    if (window.innerWidth >= 1200) {
+    if (window.innerWidth >= this.width) {
       this.container = true;
       this.containerFluid = false;
     } else {

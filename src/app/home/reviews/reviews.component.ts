@@ -16,8 +16,8 @@ export class ReviewsComponent implements OnInit {
   reviews_facebook: any[];
 
   constructor(
-    public _reviews: ReviewsService,
-    public zone: NgZone
+    private _reviews: ReviewsService,
+    private zone: NgZone
   ) { }
 
   ngOnInit() {

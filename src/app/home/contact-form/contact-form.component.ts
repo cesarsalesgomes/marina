@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+
 import { ContactFormService } from './contact-form.service';
+import { ContactForm } from './contact-form';
 
 @Component({
   selector: 'app-contact-form',
@@ -12,13 +14,15 @@ export class ContactFormComponent implements OnInit {
   form: FormGroup;
   maskTel = ['(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
   maskCel = ['(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
+  action: string;
 
   constructor(
-    private cs: ContactFormService,
+    private cfService: ContactFormService,
     private formBuilder: FormBuilder
   ) { }
 
   ngOnInit() {
+
     this.form = this.formBuilder.group({
       name: [null, [Validators.required, Validators.maxLength(70)]],
       email: [null, [Validators.required, Validators.email]],
@@ -29,11 +33,20 @@ export class ContactFormComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.form);
-  }
+    const form: ContactForm = { ...this.form.value };
+    this.action = 'sending';
 
-  reset() {
-    this.form.reset();
+    this.cfService.sendEmail(form)
+      .subscribe(() => {
+        this.form.reset();
+        this.action = 'success';
+        setTimeout(() => {
+          this.action = '';
+        }, 2000);
+      },
+      () => {
+        this.action = 'error';
+      });
   }
 
   checkRequiredTouched(field) {
@@ -51,5 +64,4 @@ export class ContactFormComponent implements OnInit {
       return email.errors['email'];
     }
   }
-
 }

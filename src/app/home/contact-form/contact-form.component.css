@@ -16,3 +16,9 @@
   color: rgb(113,24,52);
   font-weight: 450;
 }
+.btn-light-disabled {
+  border-color: rgb(113,24,52);
+  background-color: rgb(255,255,255);
+  color: rgb(113,24,52);
+  font-weight: 450;
+}

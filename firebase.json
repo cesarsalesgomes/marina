@@ -5,6 +5,10 @@
       {
         "source": "/",
         "function": "ssrapp"
+      },
+      {
+        "source": "/contactEmail",
+        "function": "contactEmail"
       }
     ]
   }
