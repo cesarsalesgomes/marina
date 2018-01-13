@@ -1,7 +1,14 @@
 <div class="container-fluid" id="home">
   <div class="row d-flex bb">
     <nav class="navbar navbar-expand-md navbar-light width-100 justify-content-between justify-content-md-center">
-      <a appFade appFontSize [sizes]="[16,15,15,15,14]" class="d-md-none nav-link icon-facebook p-0" href="https://www.facebook.com/marinarestaurante"></a>
+      <div class="d-md-none d-flex flex-column height-100 justify-content-between">
+        <a class="nav-link p-0" href="https://www.facebook.com/marinarestaurante">
+          <i appFade appFontSize [sizes]="[0,0,13,12,11]" class="icon-facebook circled"></i>
+        </a>
+        <a class="nav-link p-0 d-flex justify-content-center" href="https://www.deliverymuch.com.br/marina-restaurante">
+          <img src="assets/img/logo/delivery-much-icon.jpg" style="height:25px" class="mx-0" alt="banner-delivery-much">
+        </a>
+      </div>
       <a href="#">
         <img appResponsiveLogo src="/assets/img/logo/marina.jpg" alt="">
       </a>
@@ -17,20 +24,21 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <ul class="nav width-100 d-flex justify-content-center">
             <li class="col-3 d-none d-md-block">
-              <div class="d-flex flex-column height-100 justify-content-center">
-                <span appFontSize [sizes]="[15,14,13]"><i class="icon-phone"></i>(16) 3419-9717</span>
-                <span appFontSize [sizes]="[15,14,13]"><i class="icon-whatsapp"></i>(16) 99303-3218</span>
-              </div>
+              <a href="https://www.deliverymuch.com.br/marina-restaurante">
+                <img src="assets/img/logo/delivery-much.png" style="height:52px" class="mt-1" alt="banner-delivery-much">
+              </a>
             </li>
-            <li class="col-4 col-sm-3 col-md-6 d-flex flex-column flex-md-row align-items-md-center justify-content-md-center">
-              <a appFade appToggleLink appFontSize [sizes]="[16,15,14,12,10]" href="#home">Home</a>
-              <a appFade appToggleLink appFontSize [sizes]="[16,15,14,12,10]" href="#">Sobre nós</a>
-              <a appFade appToggleLink appFontSize [sizes]="[16,15,14,12,10]" href="#clientes">Nossos Clientes</a>
-              <a appFade appToggleLink appFontSize [sizes]="[16,15,14,12,10]" href="#contato">Contato</a>
+            <li class="col-4 col-sm-3 col-md-7 col-lg-6 d-flex flex-column flex-md-row align-items-md-center justify-content-md-center">
+              <a appFade appToggleLink appFontSize [sizes]="[16,15,14,12,10]" pageScroll href="#home">Home</a>
+              <a appFade appToggleLink appFontSize [sizes]="[16,15,14,12,10]" pageScroll href="#">Sobre nós</a>
+              <a appFade appToggleLink appFontSize [sizes]="[16,15,14,12,10]" pageScroll [pageScrollDuration]="200" href="#clientes">Nossos Clientes</a>
+              <a appFade appToggleLink appFontSize [sizes]="[16,15,14,12,10]" pageScroll [pageScrollDuration]="400" href="#contato">Contato</a>
             </li>
-            <li class="col-3 d-none d-md-block">
+            <li class="col-md-2 col-lg-3 d-none d-md-block">
               <div class="height-100 d-flex align-items-md-center">
-                <a appFade class="nav-link icon-facebook p-0 ml-auto" href="https://www.facebook.com/marinarestaurante"></a>
+                <a class="nav-link ml-auto" href="https://www.facebook.com/marinarestaurante">
+                  <i appFade appFontSize [sizes]="[15,14,13]" class="icon-facebook circled"></i>
+                </a>
               </div>
             </li>
           </ul>

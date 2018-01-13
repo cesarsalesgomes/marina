@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app.routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TextMaskModule } from 'angular2-text-mask';
 import { HttpClientModule } from '@angular/common/http';
+import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
 // Components
 import { AppComponent } from './app.component';
@@ -34,6 +35,7 @@ import { DateBrPipe } from './shared/date-br.pipe';
 
 // Enviroment
 import { environment } from '../environments/environment';
+import { FooterComponent } from './home/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -53,14 +55,16 @@ import { environment } from '../environments/environment';
     HighlightsComponent,
     ReviewsComponent,
     RatingStarsComponent,
-    DateBrPipe
+    DateBrPipe,
+    FooterComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'universal' }),
     ReactiveFormsModule,
     AppRoutingModule,
     TextMaskModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2PageScrollModule
   ],
   providers: [
     ContactFormService,

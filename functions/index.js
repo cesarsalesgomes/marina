@@ -41,7 +41,7 @@ const contactEmailFn = (req, res) => {
     const message = req.body.message;
     const mailOptions = {
         from: email,
-        to: 'cesarsalesgomes@gmail.com',
+        to: 'marinabarerestaurante@gmail.com',
         subject: 'MARINA: Contato',
         text: `${name}\n
               Celular: ${cel}\n

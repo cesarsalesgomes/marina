@@ -1,13 +1,6 @@
 .dark {
   color: rgb(52,58,64);
 }
-.icon-facebook {
-  color: rgb(0, 0, 0);
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgb(210,210,210);
-  border-radius: 3px;
-}
 .navbar {
   background-color: rgb(255, 255, 255);
 }
